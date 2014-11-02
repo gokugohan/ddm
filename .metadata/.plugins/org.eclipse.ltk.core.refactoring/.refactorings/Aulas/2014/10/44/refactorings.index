@@ -1,0 +1,11 @@
+1414406287262	Copy file
+1414406366079	Copy compilation unit
+1414407220698	Extracts string 'Click' into R.string.click
+1414407232029	Extracts string 'Long Click' into R.string.long_click
+1414407238522	Extracts string 'Dialog' into R.string.dialog
+1414409668305	Extract method 'initFindComponent'
+1414410015542	Extract method 'setListenersToViews'
+1414410044992	Rename method 'setListenersToViews'
+1414410675366	Extract method 'setOnClickListenerToViews'
+1414410778543	Rename method 'longClickViewReact'
+1414419958228	Delete element

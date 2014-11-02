@@ -1,0 +1,17 @@
+1413798752723	Delete elements
+1413800564142	Rename type 'Aula01Fragment'
+1413800577784	Rename type 'Aulas01Fragment'
+1413800867121	Change Layout
+1413800907623	Extracts string 'Fragment Aula 02' into R.string.fragment_aula_02
+1413801407100	Change Layout
+1413802331110	Extracts string 'Static Class Util Message Toast' into R.string.static_class_util_message_toast
+1413969709985	Copy file
+1413971182971	Rename field 'tvWifiStatus'
+1413971343882	Move compilation units
+1413971378279	Move compilation unit
+1413971600554	Copy file
+1413971614202	Copy file
+1414101554825	Extract method 'stateWifiConnectionCheckInit'
+1414106199318	Rename field 'authorizedBluetooth'
+1414106403091	Extract method 'showMessageDialog'
+1414145891802	Rename package 'com.heldermenezes.util'

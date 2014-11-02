@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Teste-Parse-active</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="pick_picture">Pick a picture </string>
+    <string name="action_settings">Settings</string>
+    <string name="application_id">NOZe6wD96DLvl3CQgrrqJVfcmqGcvJGK8kkiDt6y</string>
+    <string name="client_key">AhpIkHVhju2QrBBvnvO3n85Tni4yePE0NRqM2ifF</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="Password_repeat">Repeat Password</string>
+    <string name="LoginBtn">Login</string>
+    <string name="SignupBtn">Sign Up</string>
+    <string name="LogoutBtn">Log Out</string>
+    <string name="Welcome">Welcome!</string>
+    
+    <string name="AndroidParseActiveAndroid">Android Parse ActiveAndroid</string>
+    
+    <string name="menu_title">My Posts</string>
+    <string name="title_activity_write_post">Post Photo</string>
+    <string name="title_activity_post_list">All photo posts</string>
+    
+    <string name="blog_post_label">Enter photo title</string>
+    
+    <string name="save_button_text">Save</string>
+    <string name="cancel_button_text">Cancel</string>
+    <string name="empty_list_view">No photo posts to display. Add one!</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_new">New Post</string>
+    <string name="numero">Nº: </string>
+    <string name="country">Country: </string>
+    <string name="capital">Capital: </string>
+    <string name="lorem_ipsum_dolor_sit_amet_duo_et_mutat_aliquid_ocurreret_eum_cu_facete_prompta_delicatissimi_eu_natum_illum_error_mei_volutpat_sapientem_ex_pro_detracto_sensibus_usu_ad_at_oblique_bonorum_vituperata_pro_rebum_adipisci_interpretaris_ut_vim_persius_postulant_at_has_ea_utamur_vituperata_pri_eam_at_elit_iracundia_forensibus_an_vim_elitr_altera_feugiat_est_sonet_suscipit_vituperatoribus_ei_vim_novum_delicata_incorrupte_in_aeterno_qualisque_assueverit_vis_id_sit_falli_aperiri_cu_vel_dicant_graecis_omittam_ei_altera_placerat_intellegat_cu_his_wisi_graeci_noluisse_eam_ea_oratio_dolores_has_te_iudico_moderatius_id_his_eirmod_elaboraret_eos_no_ea_usu_hinc_purto_officiis_ut_erant_ignota_salutandi_has_erant_praesent_voluptatibus_ei_quo_has_deserunt_tincidunt_interesset_ea_no_hinc_fabulas_vim_vel_elitr_fastidii_ut_id_sit_ceteros_omittam_ponderum_vocent_vivendo_accusam_ad_mel_meis_facilis_nec_no_nulla_possim_dolores_eum_ne_etiam_graecis_urbanitas_eam_in_dicat_impedit_te_est_mei_ea_doctus_vidisse_errem_epicuri_indoctum_ius_ex_usu_ignota_euripidis_eu_ad_eam_constituto_consetetur_quaeque_posidonium_duo_ne_nulla_verear_est_cu_no_laudem_conceptam_nec_utinam_eruditi_mnesarchum_cum_cu_abhorreant_mediocritatem_vel_te_cum_te_paulo_delectus_evertitur_vidit_ubique_alienum_ut_cum_dicam_feugiat_fuisset_at_eum_vel_mollis_ornatus_eu_te_enim_malorum_sit_blandit_dissentias_neglegentur_mea_ex_ex_has_meis_liber_munere_viris_volutpat_in_nam_">lorem_ipsum</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, duo et mutat aliquid ocurreret, eum cu facete prompta delicatissimi, eu natum illum error mei. Volutpat sapientem ex pro. Detracto sensibus usu ad. At oblique bonorum vituperata pro, rebum adipisci interpretaris ut vim, persius postulant at has. Ea utamur vituperata pri.\n\nEam at elit iracundia forensibus, an vim elitr altera feugiat, est sonet suscipit vituperatoribus ei. Vim novum delicata incorrupte in, aeterno qualisque assueverit vis id. Sit falli aperiri cu. Vel dicant graecis omittam ei. Altera placerat intellegat cu his, wisi graeci noluisse eam ea. Oratio dolores has te, iudico moderatius id his, eirmod elaboraret eos no.\n\nEa usu hinc purto officiis, ut erant ignota salutandi has. Erant praesent voluptatibus ei quo, has deserunt tincidunt interesset ea. No hinc fabulas vim. Vel elitr fastidii ut, id sit ceteros omittam ponderum.\n\nVocent vivendo accusam ad mel, meis facilis nec no, nulla possim dolores eum ne. Etiam graecis urbanitas eam in, dicat impedit te est, mei ea doctus vidisse. Errem epicuri indoctum ius ex. Usu ignota euripidis eu, ad eam constituto consetetur.\n\nQuaeque posidonium duo ne, nulla verear est cu. No laudem conceptam nec, utinam eruditi mnesarchum cum cu, abhorreant mediocritatem vel te. Cum te paulo delectus evertitur, vidit ubique alienum ut cum, dicam feugiat fuisset at eum. Vel mollis ornatus eu, te enim malorum sit, blandit dissentias neglegentur mea ex. Ex has meis liber munere, viris volutpat in nam.</string>
+    <string name="pref_send_report">Send crash reports</string>
+    <string name="pref_send_report_summary">Helps to fix bugs</string>
+    <string name="pref_sync_frequency">Sync frequency</string>
+    <string name="pref_sync_frequency_summary">Set the sync frequency</string>
+    <string name="pref_user_name">Set username</string>
+    <string name="pref_user_name_summary">Set your username</string>
+    <string name="pref_user_profile">User Profile</string>
+    <string name="pref_update_setting">Update Settings</string>
+
+    <string-array name="syncFrequency">
+        <item name="1">Once a day</item>
+        <item name="7">Once a week</item>
+        <item name="3">Once a year</item>
+        <item name="0">Never (Update maually)</item>
+    </string-array>
+    <string-array name="syncFrequencyValues">
+        <item name="1">1</item>
+        <item name="7">7</item>
+        <item name="30">30</item>
+        <item name="0">0</item>
+    </string-array>
+        <string name="insert_username_here">Insert username here</string>
+        <string name="insert_password_here">Insert password here</string>
+
+</resources>

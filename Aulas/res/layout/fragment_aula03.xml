@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#bdc3c7"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/id_tv_about_this_app"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="32dp"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+        android:text="@string/str_about_app"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/id_btn_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:padding="5dp"
+        android:text="@string/str_btn_wifi"
+        android:background="@drawable/custom_button"
+        />
+    
+    <View android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#ffffff"/>
+    
+     <TextView
+        android:id="@+id/id_tv_bluetoothState"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="32dp"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+        android:text="@string/str_about_app"
+        android:layout_height="wrap_content" />
+    
+    <Button
+        android:id="@+id/id_btn_bluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:padding="5dp"
+        android:text="@string/str_btn_bluetooth"
+        android:background="@drawable/custom_button"
+        />
+
+</LinearLayout>

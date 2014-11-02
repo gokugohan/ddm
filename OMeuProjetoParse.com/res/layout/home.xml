@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3498db" >
+
+    <FrameLayout
+        android:id="@+id/ignored_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
+            android:text="@string/lorem_ipsum"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ff0000" />
+    </FrameLayout>
+
+</ScrollView>
