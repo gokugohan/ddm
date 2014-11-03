@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.heldermenezes.aulas.R;
+import com.heldermenezes.main.R;
 
 public class Aula01Fragment extends Fragment implements View.OnClickListener {
 

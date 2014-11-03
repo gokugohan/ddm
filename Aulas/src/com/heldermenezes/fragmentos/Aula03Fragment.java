@@ -1,11 +1,8 @@
 package com.heldermenezes.fragmentos;
 
-import android.app.AlertDialog;
 import android.app.Fragment;
 import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothManager;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.wifi.WifiManager;
@@ -19,7 +16,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.heldermenezes.aulas.R;
+import com.heldermenezes.main.R;
 import com.heldermenezes.utils.Util;
 
 public class Aula03Fragment extends Fragment implements View.OnClickListener {

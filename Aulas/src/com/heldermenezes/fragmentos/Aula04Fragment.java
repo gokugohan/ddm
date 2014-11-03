@@ -11,7 +11,7 @@ import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
 
-import com.heldermenezes.aulas.R;
+import com.heldermenezes.main.R;
 import com.heldermenezes.utils.AmUtil;
 
 public class Aula04Fragment extends Fragment {

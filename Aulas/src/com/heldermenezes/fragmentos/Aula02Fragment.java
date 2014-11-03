@@ -1,10 +1,5 @@
 package com.heldermenezes.fragmentos;
 
-import com.heldermenezes.aulas.R;
-import com.heldermenezes.aulas.R.id;
-import com.heldermenezes.aulas.R.layout;
-import com.heldermenezes.utils.AmUtil;
-
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,6 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.heldermenezes.main.R;
+import com.heldermenezes.utils.AmUtil;
 
 public class Aula02Fragment extends Fragment {
 	
