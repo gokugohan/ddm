@@ -1,4 +1,4 @@
 Aulas DDM
 ===
 
-Desenvolvimento para dispositivos m
+Desenvolvimento para dispositivos móveis
