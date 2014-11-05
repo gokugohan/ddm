@@ -1,0 +1,79 @@
+package com.heldermenezes.activities;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Window;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+
+import com.heldermenezes.main.R;
+import com.heldermenezes.utils.AmUtil;
+
+public class WebViewActivity extends Activity {
+
+	private WebView mWebView;
+	private String endereco;
+	private WebSettings settings;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		this.getWindow().requestFeature(Window.FEATURE_PROGRESS);
+		this.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+		this.setContentView(R.layout.activity_webview);
+
+		mWebView = (WebView) this.findViewById(R.id.id_wb_Browser);
+		
+		//endereco = savedInstanceState.getString("endereco");
+		
+		if(endereco.isEmpty()){
+			endereco = this.getIntent().getStringExtra("endereco");
+		}
+		
+
+		settingWebView();
+
+		this.mWebView.loadUrl(endereco);
+
+	}
+
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		if (!endereco.isEmpty() && endereco.length() > 0) {
+			outState.putString("endereco", endereco);
+		}
+
+	}
+
+	@Override
+	protected void onRestoreInstanceState(Bundle savedInstanceState) {
+		super.onRestoreInstanceState(savedInstanceState);
+		endereco = savedInstanceState.getString("endereco");
+	}
+	
+	private void settingWebView() {
+
+		settings =this.mWebView.getSettings();
+		settings.setJavaScriptEnabled(true);
+		
+		this.mWebView.setWebChromeClient(new WebChromeClient() {
+			@Override
+			public void onProgressChanged(WebView view, int newProgress) {
+				WebViewActivity.this.setProgress(newProgress * 1000);
+			}
+		});
+
+		this.mWebView.setWebViewClient(new WebViewClient() {
+			@Override
+			public void onReceivedError(WebView view, int errorCode,
+					String description, String failingUrl) {
+				AmUtil.fazerAparecerUmaBreveMensagem(description,
+						WebViewActivity.this);
+			}
+		});
+	}
+
+}

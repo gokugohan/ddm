@@ -1,6 +1,7 @@
 package com.heldermenezes.fragmentos;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,9 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.heldermenezes.activities.WebViewActivity;
 import com.heldermenezes.main.R;
-import com.heldermenezes.utils.AmUtil;
-import com.heldermenezes.utils.Util;
 
 public class Aula05Fragment extends Fragment {
 
@@ -22,7 +22,8 @@ public class Aula05Fragment extends Fragment {
 	private TextView mTvAboutApp;
 	private EditText mEtEndereco;
 	private OnClickListener mclickHandler;
-
+	private Context mContext;
+		
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -31,7 +32,7 @@ public class Aula05Fragment extends Fragment {
 				.inflate(R.layout.fragment_aula05, container, false);
 
 		init(view);
-
+		this.mContext = this.getActivity();
 		return view;
 	}
 
@@ -50,10 +51,10 @@ public class Aula05Fragment extends Fragment {
 				String endereco = "";
 				switch (v.getId()) {
 				case R.id.id_btn_site1:
-					endereco = getString(R.string.str_address_site1);
+					endereco = getActivity().getResources().getString(R.string.str_address_site1);
 					break;
 				case R.id.id_btn_site2:
-					endereco = getString(R.string.str_address_site2);
+					endereco = getActivity().getResources().getString(R.string.str_address_site2);
 					break;
 					
 				case R.id.id_btn_site3:
@@ -61,7 +62,8 @@ public class Aula05Fragment extends Fragment {
 					break;
 				}
 
-				abrirSite(endereco);
+				//abrirSiteExternalmente(endereco);
+				abrirSiteInternamente(endereco);
 
 			}
 		};
@@ -72,7 +74,14 @@ public class Aula05Fragment extends Fragment {
 		
 	}
 
-	protected void abrirSite(String endereco) {
+	protected void abrirSiteInternamente(String endereco) {
+		Intent intent = new Intent(mContext,WebViewActivity.class);
+		intent.putExtra("endereco", endereco);
+		
+		this.startActivity(intent);
+	}
+
+	protected void abrirSiteExternalmente(String endereco) {
 		// parte 1 - tipo de mensagem
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		// parte 2 - detalhes da mensagem

@@ -50,43 +50,46 @@ public final class R {
         public static final int ic_launcher=0x7f020006;
     }
     public static final class id {
-        public static final int LinearLayout1=0x7f0a0007;
-        public static final int action_settings=0x7f0a0019;
-        public static final int action_settings1=0x7f0a001a;
-        public static final int btnClickMe01=0x7f0a0004;
-        public static final int btnClickMe02=0x7f0a0005;
-        public static final int btnClickMe03=0x7f0a0006;
-        public static final int btnMsg=0x7f0a0009;
+        public static final int LinearLayout1=0x7f0a0009;
+        public static final int action_settings=0x7f0a001b;
+        public static final int action_settings1=0x7f0a001c;
+        public static final int btnClickMe01=0x7f0a0006;
+        public static final int btnClickMe02=0x7f0a0007;
+        public static final int btnClickMe03=0x7f0a0008;
+        public static final int btnMsg=0x7f0a000b;
         public static final int container=0x7f0a0001;
         public static final int drawer_layout=0x7f0a0000;
-        public static final int id_btn_bluetooth=0x7f0a000d;
-        public static final int id_btn_site1=0x7f0a0014;
-        public static final int id_btn_site2=0x7f0a0015;
-        public static final int id_btn_site3=0x7f0a0017;
-        public static final int id_btn_wifi=0x7f0a000b;
-        public static final int id_et_url=0x7f0a0016;
-        public static final int id_ne=0x7f0a0010;
-        public static final int id_nw=0x7f0a000f;
-        public static final int id_se=0x7f0a0012;
-        public static final int id_sw=0x7f0a0011;
-        public static final int id_tv_about_app_aula_cinco=0x7f0a0013;
-        public static final int id_tv_about_this_app=0x7f0a000a;
-        public static final int id_tv_bluetoothState=0x7f0a000c;
-        public static final int id_tv_hello_world=0x7f0a000e;
+        public static final int id_btn_back=0x7f0a0004;
+        public static final int id_btn_bluetooth=0x7f0a000f;
+        public static final int id_btn_site1=0x7f0a0016;
+        public static final int id_btn_site2=0x7f0a0017;
+        public static final int id_btn_site3=0x7f0a0019;
+        public static final int id_btn_wifi=0x7f0a000d;
+        public static final int id_et_url=0x7f0a0018;
+        public static final int id_ne=0x7f0a0012;
+        public static final int id_nw=0x7f0a0011;
+        public static final int id_se=0x7f0a0014;
+        public static final int id_sw=0x7f0a0013;
+        public static final int id_tv_about_app_aula_cinco=0x7f0a0015;
+        public static final int id_tv_about_this_app=0x7f0a000c;
+        public static final int id_tv_bluetoothState=0x7f0a000e;
+        public static final int id_tv_hello_world=0x7f0a0010;
+        public static final int id_wb_Browser=0x7f0a0003;
         public static final int navigation_drawer=0x7f0a0002;
-        public static final int section_label=0x7f0a0018;
-        public static final int tvHelloWorld=0x7f0a0003;
-        public static final int tvMsg=0x7f0a0008;
+        public static final int section_label=0x7f0a001a;
+        public static final int tvHelloWorld=0x7f0a0005;
+        public static final int tvMsg=0x7f0a000a;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int fragment_aula01=0x7f030001;
-        public static final int fragment_aula02=0x7f030002;
-        public static final int fragment_aula03=0x7f030003;
-        public static final int fragment_aula04=0x7f030004;
-        public static final int fragment_aula05=0x7f030005;
-        public static final int fragment_main=0x7f030006;
-        public static final int fragment_navigation_drawer=0x7f030007;
+        public static final int activity_webview=0x7f030001;
+        public static final int fragment_aula01=0x7f030002;
+        public static final int fragment_aula02=0x7f030003;
+        public static final int fragment_aula03=0x7f030004;
+        public static final int fragment_aula04=0x7f030005;
+        public static final int fragment_aula05=0x7f030006;
+        public static final int fragment_main=0x7f030007;
+        public static final int fragment_navigation_drawer=0x7f030008;
     }
     public static final class menu {
         public static final int aula05=0x7f090000;
@@ -116,6 +119,7 @@ public final class R {
         public static final int str_about_app_aula_cinco=0x7f070034;
         public static final int str_address_site1=0x7f070037;
         public static final int str_address_site2=0x7f070038;
+        public static final int str_btn_back=0x7f07003a;
         public static final int str_btn_bluetooth=0x7f07001a;
         public static final int str_btn_wifi=0x7f070012;
         public static final int str_cancel_button=0x7f070031;

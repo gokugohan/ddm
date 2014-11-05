@@ -8,3 +8,12 @@
 1415013995189	Delete element
 1415014002267	Delete element
 1415014065661	Rename local variable 'siteParaAbrir'
+1415023301198	Move 1 resources to 'color'
+1415023342195	Move 1 resources to 'values'
+1415023346644	Delete element
+1415024650518	Move 1 resources to 'drawable'
+1415024745341	Delete element
+1415024751964	Delete element
+1415182761913	Rename type 'WebActivity'
+1415183543751	Rename method 'abrirSite'
+1415184268616	Extract method 'settingWebView'
