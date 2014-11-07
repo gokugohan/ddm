@@ -1,0 +1,11 @@
+package com.example.jogodeadivinha;
+
+import android.app.Activity;
+
+public class JogoDeAdivinhaFinal extends Activity {
+
+	public JogoDeAdivinhaFinal() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,8 @@
+1415359164005	Change Layout
+1415359950812	Extract method 'init'
+1415360056325	Copy file
+1415360814075	Extracts string 'Número a jogar' into R.string.numero_a_jogar
+1415360829389	Extracts string 'Jogar' into R.string.jogar
+1415360836155	Extracts string 'Restart' into R.string.restart
+1415361161242	Copy file
+1415363335179	Extract method 'getValuesOfMinMax'
