@@ -18,5 +18,12 @@
     <string name="jogar">Jogar</string>
     <string name="restart">Restart</string>
     <string name="str_debug_jogar">Aqui surgira o debug do activity</string>
+    <string name="str_pista_input_nao_adequado">Por favor apenas um nº (exº 500)</string>
+    
+    <string name="str_sugestao_jogar_acima">O seu número é inferior ao sorteado. Jogue MAIOR.</string>
+    <string name="str_sugestao_jogar_abaixo">O seu número é superior ao sorteado. Joque MENOR.</string>
+    <string name="str_fim_parabens">Parabéns acertou!</string>
+    
+    <string name="str_dialog_mensagem">PARA DE JOGAR PÁ...</string>
     
 </resources>

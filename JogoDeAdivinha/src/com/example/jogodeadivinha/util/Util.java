@@ -25,8 +25,14 @@ public class Util {
 		return editText.getText().toString().trim();
 	}
 	
-	public static int getInt(EditText editText){
+	public static int getInt(EditText editText) throws Exception{
 		return Integer.parseInt(editText.getText().toString().trim());
+	}
+	
+	public static class MensagemDoJogo{
+		public final static String JOGADA_ACIMA ="O seu número é inferior ao sorteado. Jogue MAIOR.";
+		public final static String JOGADA_ABAIXO = "O seu número é superior ao sorteado. Joque MENOR.";
+		public final static String JOGADA_CERTA = "Parabéns acertou em";
 	}
 
 }

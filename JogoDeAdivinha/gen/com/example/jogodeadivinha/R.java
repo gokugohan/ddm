@@ -60,12 +60,17 @@ public final class R {
         public static final int str_comecar=0x7f050006;
         public static final int str_como_jogar=0x7f05000b;
         public static final int str_debug_jogar=0x7f05000e;
+        public static final int str_dialog_mensagem=0x7f050013;
         public static final int str_error_number_format=0x7f05000a;
+        public static final int str_fim_parabens=0x7f050012;
         public static final int str_info_jogo=0x7f050003;
         public static final int str_info_max=0x7f050005;
         public static final int str_info_min=0x7f050004;
         public static final int str_max=0x7f050007;
         public static final int str_min=0x7f050008;
+        public static final int str_pista_input_nao_adequado=0x7f05000f;
+        public static final int str_sugestao_jogar_abaixo=0x7f050011;
+        public static final int str_sugestao_jogar_acima=0x7f050010;
     }
     public static final class style {
         /** 
