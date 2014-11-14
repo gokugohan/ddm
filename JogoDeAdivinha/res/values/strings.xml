@@ -9,9 +9,14 @@
     <string name="str_info_min">Informe o número mínimo</string>
     <string name="str_info_max">Informe o número máximo</string>
     <string name="str_comecar">Começar</string>
-    <string name="str_max">Máximo (1)</string>
-    <string name="str_min">Mínimo (1000)</string>
-    <string name="numero_a_jogar">Número a jogar</string>
+    <string name="str_max">Máximo (1000)</string>
+    <string name="str_min">Mínimo (1)</string>
+    <string name="numero_da_jogada">Número da jogada ex. 500</string>
+    <string name="str_error_number_format">Aceita só números inteiros</string>
+    
+    <string name="str_como_jogar">Escreva abaixo o seu palpite e toque em \"jogar\"</string>
     <string name="jogar">Jogar</string>
     <string name="restart">Restart</string>
+    <string name="str_debug_jogar">Aqui surgira o debug do activity</string>
+    
 </resources>

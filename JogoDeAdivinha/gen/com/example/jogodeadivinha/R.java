@@ -22,27 +22,30 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int custom_button=0x7f020000;
-        public static final int custom_edittext=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
+        public static final int btn_holo_custom=0x7f020000;
+        public static final int custom_button=0x7f020001;
+        public static final int custom_edittext=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000a;
-        public static final int id_btn_comecar=0x7f080008;
-        public static final int id_btn_jogar=0x7f080002;
-        public static final int id_btn_restart=0x7f080004;
-        public static final int id_et_max=0x7f080007;
-        public static final int id_et_min=0x7f080006;
-        public static final int id_et_numjogar=0x7f080001;
-        public static final int id_tv_debug_jogar=0x7f080003;
-        public static final int id_tv_feedback=0x7f080009;
-        public static final int id_tv_feedback_jogar=0x7f080000;
-        public static final int id_tv_intro=0x7f080005;
+        public static final int RelativeLayout1=0x7f080005;
+        public static final int action_settings=0x7f08000c;
+        public static final int id_LinearLayout=0x7f080006;
+        public static final int id_btn_comecar=0x7f080003;
+        public static final int id_btn_jogar=0x7f080009;
+        public static final int id_btn_restart=0x7f08000b;
+        public static final int id_et_max=0x7f080002;
+        public static final int id_et_min=0x7f080001;
+        public static final int id_et_numero_jogado=0x7f080008;
+        public static final int id_tv_como_jogar=0x7f080007;
+        public static final int id_tv_debug_jogar=0x7f08000a;
+        public static final int id_tv_feedback=0x7f080004;
+        public static final int id_tv_intro=0x7f080000;
     }
     public static final class layout {
-        public static final int activity_jogo_de_adivinha_em_curso=0x7f030000;
-        public static final int activity_jogo_de_adivinha_final=0x7f030001;
-        public static final int activity_jogo_de_adivinha_main=0x7f030002;
+        public static final int activity_final=0x7f030000;
+        public static final int activity_inicial=0x7f030001;
+        public static final int activity_jogar=0x7f030002;
     }
     public static final class menu {
         public static final int jogo_de_adivinha_main=0x7f070000;
@@ -51,10 +54,13 @@ public final class R {
         public static final int action_settings=0x7f050002;
         public static final int app_name=0x7f050000;
         public static final int hello_world=0x7f050001;
-        public static final int jogar=0x7f05000a;
-        public static final int numero_a_jogar=0x7f050009;
-        public static final int restart=0x7f05000b;
+        public static final int jogar=0x7f05000c;
+        public static final int numero_da_jogada=0x7f050009;
+        public static final int restart=0x7f05000d;
         public static final int str_comecar=0x7f050006;
+        public static final int str_como_jogar=0x7f05000b;
+        public static final int str_debug_jogar=0x7f05000e;
+        public static final int str_error_number_format=0x7f05000a;
         public static final int str_info_jogo=0x7f050003;
         public static final int str_info_max=0x7f050005;
         public static final int str_info_min=0x7f050004;

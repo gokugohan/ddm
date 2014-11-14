@@ -1,0 +1,27 @@
+package com.example.jogodeadivinha.util;
+
+import java.util.Random;
+
+public class Util {
+
+	
+	public static int inteiroAleatorio(int min, int max) {
+		int ret = -1;
+		Random random = new Random();
+		int amplitude = (max-min)+1;
+		int salto = random.nextInt(amplitude); // produz um inteiro [0, n[
+		ret = min + salto;
+		return ret;
+	}
+	
+	public static void troca(int a, int b){
+		int aux = 0;
+		if(a>b){
+			aux = a;
+			a = b;
+			b = aux;
+		}
+	}
+	
+	
+}
