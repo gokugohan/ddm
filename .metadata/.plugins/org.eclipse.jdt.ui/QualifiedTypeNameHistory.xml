@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.heldermenezes.omeuprojeto.R.dimen"/>
-<fullyQualifiedTypeName name="android.graphics.drawable.ColorDrawable"/>
-<fullyQualifiedTypeName name="android.graphics.Color"/>
-<fullyQualifiedTypeName name="com.heldermenezes.omeuprojeto.R.drawable"/>
-<fullyQualifiedTypeName name="android.R"/>
-<fullyQualifiedTypeName name="android.R.drawable"/>
 <fullyQualifiedTypeName name="com.parse.ParseUser"/>
 <fullyQualifiedTypeName name="android.view.Menu"/>
 <fullyQualifiedTypeName name="com.heldermenezes.omeuprojeto.R.id"/>
 <fullyQualifiedTypeName name="com.heldermenezes.fragmentos.Aula04Fragment"/>
 <fullyQualifiedTypeName name="android.view.View.OnLongClickListener"/>
 <fullyQualifiedTypeName name="com.heldermenezes.aulas.R.array"/>
-<fullyQualifiedTypeName name="android.app.AlertDialog"/>
 <fullyQualifiedTypeName name="com.heldermenezes.aulas.R.id"/>
 <fullyQualifiedTypeName name="com.heldermenezes.aulas.R.color"/>
 <fullyQualifiedTypeName name="com.heldermenezes.aulas.R.drawable"/>
-<fullyQualifiedTypeName name="android.content.DialogInterface"/>
-<fullyQualifiedTypeName name="android.content.DialogInterface.OnClickListener"/>
 <fullyQualifiedTypeName name="com.heldermenezes.aulas.R.string"/>
 <fullyQualifiedTypeName name="com.heldermenezes.aulas.R"/>
 <fullyQualifiedTypeName name="com.heldermenezes.aulas.R.layout"/>
@@ -46,18 +37,27 @@
 <fullyQualifiedTypeName name="com.example.jogodeadivinha.JogoDeAdivinhaMainActivity"/>
 <fullyQualifiedTypeName name="com.example.jogodeadivinha.logic.JogoDeAdivinha"/>
 <fullyQualifiedTypeName name="android.widget.Toast"/>
-<fullyQualifiedTypeName name="com.example.jogodeadivinha.R.string"/>
 <fullyQualifiedTypeName name="android.widget.EditText"/>
 <fullyQualifiedTypeName name="android.widget.Button"/>
 <fullyQualifiedTypeName name="android.view.View"/>
-<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
-<fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="com.example.jogodeadivinha.JogoDeAdivinhaEmCurso"/>
 <fullyQualifiedTypeName name="com.example.jogodeadivinha.JogoDeAdivinhaInicial"/>
-<fullyQualifiedTypeName name="com.example.jogodeadivinha.util.Util"/>
 <fullyQualifiedTypeName name="android.os.Bundle"/>
-<fullyQualifiedTypeName name="com.example.jogodeadivinha.model.JogoDeAdivinha"/>
 <fullyQualifiedTypeName name="android.widget.TextView"/>
 <fullyQualifiedTypeName name="com.example.jogodeadivinha.R.id"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="com.example.jogodeadivinha.R"/>
+<fullyQualifiedTypeName name="com.example.jogodeadivinha.model.JogoDeAdivinha"/>
+<fullyQualifiedTypeName name="com.example.jogodeadivinha.util.Util"/>
+<fullyQualifiedTypeName name="com.example.jogodeadivinha.util.Util.MensagemDoJogo"/>
+<fullyQualifiedTypeName name="android.app.AlertDialog"/>
+<fullyQualifiedTypeName name="android.app.AlertDialog.Builder"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="android.content.DialogInterface"/>
+<fullyQualifiedTypeName name="android.content.DialogInterface.OnClickListener"/>
+<fullyQualifiedTypeName name="com.example.jogodeadivinha.Inicial"/>
+<fullyQualifiedTypeName name="com.example.jogodeadivinha.R.string"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="com.example.jogodeadivinha.model.JogoDeAdivinha.EstadoDoJogo"/>
 </qualifiedTypeNameHistroy>

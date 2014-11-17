@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Aula20141117</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    
+    
+    <string name="str_sobre_app">Ouça os hinos de algumas nações</string>
+    <string name="str_sobre_pt">Bandeira de Portugal</string>
+    <string name="str_sobre_uk">Bandeira do Reino Unido</string>
+    <string name="str_tv_info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut lectus nec dolor elementum placerat a ut mi. Curabitur quam turpis, finibus nec auctor id, lacinia eget massa. Duis lobortis tellus nibh. Cras consequat cursus tempor. Nulla facilisi. Donec sed justo sed lectus feugiat congue. Morbi venenatis, turpis sit amet ultrices accumsan, nulla enim posuere nibh, sed malesuada enim turpis a tortor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In eu nulla euismod, vulputate est et, suscipit tellus. Proin scelerisque tristique ante, nec placerat eros viverra sed. Cras est dui, laoreet eget mauris eget, condimentum suscipit lectus.</string>
+    
+</resources>
