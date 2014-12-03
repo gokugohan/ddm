@@ -1,9 +1,0 @@
-package com.example.jogodeadivinha.util;
-
-public class Util {
-
-	public Util() {
-		
-	}
-
-}

@@ -1,0 +1,261 @@
+package com.example.filesystem1;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Random;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore.Audio.Media;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends ActionBarActivity implements OnClickListener {
+
+	private FileOutputStream mFileOutputStream;
+	private String msg = "";
+	private static final String TAG = "FILE_OUTPUT_STREAM";
+
+	private Button btnEscrever, btnLeitura;
+	private EditText etFrase;
+	private TextView tvFraseLeitura;
+	private boolean sucesso;
+	private FileInputStream mFileInputStream;
+	private String nomeAoCalhas;
+
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+
+		this.btnEscrever = (Button) findViewById(R.id.id_btn_escrever);
+		this.btnLeitura = (Button) findViewById(R.id.id_btn_ler);
+		this.etFrase = (EditText) findViewById(R.id.id_et_frase);
+		this.tvFraseLeitura = (TextView) findViewById(R.id.id_tv_frase_leitura);
+
+		this.btnEscrever.setOnClickListener(this);
+		this.btnLeitura.setOnClickListener(this);
+
+		String localizacao = getLocalPrivateFileStorage(MainActivity.this);
+
+		tvFraseLeitura.setText(localizacao);
+	}
+
+	private String getLocalPrivateFileStorage(Context c) {
+		File file = c.getFilesDir();
+		String localizacao = file.getAbsolutePath();
+		return localizacao;
+	}
+
+	private int numeroAleatorio(int min, int max) {
+		Random r = new Random();
+		int amplitude = max - min + 1;
+		int salto = r.nextInt(amplitude);
+		int destino = min + salto;
+		return destino;
+	}
+
+	private String[] auxTransformaArrayList_em_String_Array(ArrayList<String> a) {
+		String[] ret = null;
+
+		if (a != null) {
+			int tamanho = a.size();
+			if (tamanho > 0) {
+				int contador = 0;
+				ret = new String[tamanho];
+				while (contador < tamanho) {
+					ret[contador] = (String) a.get(contador);
+					contador++;
+				}
+			}
+		}
+
+		return ret;
+	}
+
+	private String[] ioComInternalStorage_Leitura(String ficheiro,
+			Context context) {
+		String ret[] = null;
+		ArrayList<String> conteudo = new ArrayList<String>();
+		msg = "";
+		try {
+			mFileInputStream = context.openFileInput(ficheiro);
+			if (mFileInputStream != null) {
+				msg = "Ponteiro saudável";
+				Log.i(TAG, msg);
+				int byteLido;
+				char simboloLido;
+				String fraseQueEstaSendoLida = "";
+				while ((byteLido = mFileInputStream.read()) != -1) {
+					simboloLido = (char) byteLido;
+					fraseQueEstaSendoLida += simboloLido;
+					if (fraseQueEstaSendoLida.endsWith("\n")) {
+						conteudo.add(fraseQueEstaSendoLida);
+						fraseQueEstaSendoLida = "";
+					} else {
+						conteudo.add(fraseQueEstaSendoLida);
+					}
+				}
+				mFileInputStream.close();
+				ret = auxTransformaArrayList_em_String_Array(conteudo);
+			} else {
+				msg = "Ponteiro não é saudável";
+				Log.i(TAG, msg);
+			}
+		} catch (FileNotFoundException e) {
+			msg = "ioComInternalStorage_Leitura : RTE = " + e.toString();
+			Log.i(TAG, msg);
+		} catch (IOException io) {
+			msg = "ioComInternalStorage_Leitura : RTE = " + io.toString();
+			Log.i(TAG, msg);
+		}
+		return ret;
+	}
+
+	/***
+	 * Escrever em um ficheiro
+	 * 
+	 * @param nomeFicheiro
+	 *            - O nome do ficheiro
+	 * @param conteudo
+	 *            - O conteudo a ser escrito
+	 * @param context
+	 *            - o contexto onde vai ser escrito
+	 * @return - retorna true em caso de sucesso, caso contrário retorna false
+	 */
+	private boolean ioComInternalStorage_escrita(String nomeFicheiro,
+			String[] conteudo, Context context) {
+		try {
+			mFileOutputStream = context.openFileOutput(nomeFicheiro,
+					Context.MODE_PRIVATE);
+
+			if (mFileOutputStream != null) {
+				msg = "@ioComInternalStorage_escrita : com ponteiro OK.";
+				Log.i(TAG, msg);
+				int quantasFrases = conteudo.length;
+
+				if (quantasFrases > 0) {
+
+					for (String c : conteudo) {
+						byte[] byteParaEscrita = c.getBytes();
+						this.mFileOutputStream.write(byteParaEscrita);
+
+						msg = "@ioComInternalStorage_escrita : foi escrita a frase\n "
+								+ c;
+						Log.i(TAG, msg);
+					}
+
+					this.mFileOutputStream.close();
+					return true;
+
+				} else {
+					msg = "@ioComInternalStorage_escrita : quantasFrases : "
+							+ quantasFrases;
+					Log.i(TAG, msg);
+				}
+
+			} else {
+				msg = "@ioComInternalStorage_escrita : sem ponteiro OK.";
+				Log.i(TAG, msg);
+			}
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return false;
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.id_btn_escrever:
+			fazerUmaEscritaPrivada();
+			break;
+		case R.id.id_btn_ler:
+			fazerLeituraPrivada();
+			break;
+		}
+	}
+	
+	
+	private boolean checkSDCard(){
+		if(Environment.isExternalStorageEmulated()){
+			return true;
+		}
+		return false;
+	}
+	
+	private boolean isSdCardReadable(){
+		String estado = Environment.getExternalStorageState();
+		return false;
+	}
+
+	private void fazerLeituraPrivada() {
+		if (sucesso) {
+
+			String[] coisasLidas = ioComInternalStorage_Leitura(nomeAoCalhas,
+					MainActivity.this);
+			aux_escreverArrayDeStringsParaTextView(coisasLidas, tvFraseLeitura);
+		}
+	}
+
+	private void fazerUmaEscritaPrivada() {
+
+		String conteudo[] = { "Primeira linha", "Segunda linha",
+				"Terceira linha", ",Quarta linha",
+				this.etFrase.getText().toString().trim() };
+
+		nomeAoCalhas = numeroAleatorio(1, 100) + ".TXT";
+
+		sucesso = this.ioComInternalStorage_escrita(nomeAoCalhas, conteudo,
+				MainActivity.this);
+
+		obterTodosOsFicheirosPrivadosDaApp(MainActivity.this, true);
+
+		this.etFrase.setText("");
+
+	}
+
+	private String[] obterTodosOsFicheirosPrivadosDaApp(Context context,
+			boolean feedback) {
+		String[] todosOsFicheiros = context.fileList();
+		aux_escreverArrayDeStringsParaTextView(todosOsFicheiros,
+				this.tvFraseLeitura);
+		return todosOsFicheiros;
+	}
+
+	private void aux_escreverArrayDeStringsParaTextView(String[] conteudo,
+			TextView tv) {
+		String msg = "";
+		tv.setText("");
+		if (conteudo != null) {
+			int quantasCoisas = conteudo.length;
+			if (quantasCoisas > 0) {
+				for (String coisa : conteudo) {
+					tv.append(coisa);
+					tv.append("\n");
+				}
+			} else {
+				msg = "Não há conteúdo a mostrar (conteudo.length==0).\n";
+			}
+		} else {
+			msg = "Não há conteúdo a mostrar (conteudo==null).\n";
+		}
+		tv.append(msg);
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.example.aula20141117;
+
+import com.google.android.gms.maps.MapFragment;
+
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+
+public class MapActivity extends ActionBarActivity {
+
+	private MapFragment mMapa;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_map);
+
+	}
+
+}

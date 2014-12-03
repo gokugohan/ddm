@@ -1,0 +1,12 @@
+package com.example.util;
+
+public class AmUtilIO {
+
+	public AmUtilIO() {
+	}
+	
+	public String WriteRandomContenteFile(String nomeFicheiro) {
+		String ret="";
+		return ret;
+	}
+}

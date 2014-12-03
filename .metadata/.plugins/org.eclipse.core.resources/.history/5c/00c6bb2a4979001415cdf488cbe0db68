@@ -1,0 +1,24 @@
+package com.example.util;
+
+public class AmUtilIO {
+
+	
+	public AmUtilIO() {
+	}
+	
+	public String io_aux_RandomText(String nomeFicheiro, String... conteudo) {
+		String ret="";
+		int quantidadeDeLinhas = inteiroAleatorio(5,10);
+		int quantidadeDePalavras = 0;
+		
+		return ret;
+	}//io_aux_RandomText
+	
+	public String io_aux_TextoAleatorio(String nomeFicheiro) {
+		return io_aux_RandomText(nomeFicheiro);
+	}//io_aux_TextoAleatorio
+	
+	
+	
+	
+}

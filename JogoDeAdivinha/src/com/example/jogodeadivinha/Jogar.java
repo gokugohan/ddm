@@ -89,7 +89,7 @@ public class Jogar extends Activity {
 
 		try {
 			numeroJogada = Util.getInt(mEtNumJogada);
-			
+			mEtNumJogada.setText("");
 			mJogo.setUltimoNumJogado(numeroJogada);
 			
 			String resposta = mJogo.jogar();
@@ -98,7 +98,8 @@ public class Jogar extends Activity {
 			if(mJogo.isJogoTerminou()){
 				AlertDialog.Builder dialog = new AlertDialog.Builder(Jogar.this);
 				dialog.setTitle("Pretende voltar a jogar!");
-				dialog.setMessage(getResources().getString(R.string.str_dialog_mensagem));
+				//dialog.setMessage(getResources().getString(R.string.str_dialog_mensagem));
+				dialog.setMessage(resposta);
 				dialog.setPositiveButton("SIM", positiveButton);
 				
 				dialog.setNegativeButton("NÃO", negativeButton);
@@ -123,8 +124,15 @@ public class Jogar extends Activity {
 			Intent intent = new Intent(Jogar.this,Inicial.class);
 			startActivity(intent);
 			finish();
+			
+//			Intent intent = new Intent(Intent.ACTION_MAIN);
+//			intent.addCategory(Intent.CATEGORY_HOME);
+//			intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//			startActivity(intent);
+			
 		}
 	};
+	
 	DialogInterface.OnClickListener negativeButton = new DialogInterface.OnClickListener() {
 
 		@Override

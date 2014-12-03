@@ -1,11 +1,12 @@
 package com.example.jogodeadivinha.model;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Random;
 
-import com.example.jogodeadivinha.util.Util;
-
 import android.os.Bundle;
+
+import com.example.jogodeadivinha.util.Util;
 
 public class JogoDeAdivinha {
 
@@ -13,6 +14,9 @@ public class JogoDeAdivinha {
 	private ArrayList<Integer> mColJogadas;
 	private final static int NENHUM = -1;
 
+	private Date mMomentoDeInicio;
+	private Date mMomentoFinal;
+	
 	private enum EstadoDoJogo {
 		JOGO_NAO_INICIADO, JOGO_JAGADA_ACIMA, JOGO_JOGADA_ABAIXO, JOGO_JAGADA_CERTA
 	}
@@ -27,6 +31,8 @@ public class JogoDeAdivinha {
 		this.mUltimoNumJogado = NENHUM;
 		this.mTentativas = 0;
 		this.mEstadoDoJogo = EstadoDoJogo.JOGO_NAO_INICIADO;
+		this.mMomentoDeInicio = new Date();
+		this.mMomentoFinal = null;
 	}
 
 	public JogoDeAdivinha(int min, int max) {
@@ -44,6 +50,8 @@ public class JogoDeAdivinha {
 		this.mUltimoNumJogado = NENHUM;
 		this.mTentativas = 0;
 		this.mEstadoDoJogo = EstadoDoJogo.JOGO_NAO_INICIADO;
+		this.mMomentoDeInicio = new Date();
+		this.mMomentoFinal = null;
 	}// JogoDeAdivinha
 
 	public JogoDeAdivinha(Bundle bundle) {
@@ -74,6 +82,26 @@ public class JogoDeAdivinha {
 		return ret;
 	}// estadoDoJogoEnquantoBundle
 
+	
+	
+	public long pontuacao(){
+		long pontos = 0;
+		if(mEstadoDoJogo == EstadoDoJogo.JOGO_JAGADA_CERTA){
+			int amplitude = mMax - mMin;
+			long inicio = mMomentoDeInicio.getTime();
+			
+			if(mMomentoFinal != null){
+				long fim = mMomentoFinal.getTime();
+				
+				long tempoDeJogo = (fim - inicio)/1000;
+				
+				pontos = (amplitude / (mTentativas + tempoDeJogo))*100;	
+			}
+			
+		}		
+		return pontos;
+	}
+	
 	private int inteiroAleatorio(int min, int max) {
 		int ret = NENHUM;
 		Random random = new Random();
@@ -127,7 +155,8 @@ public class JogoDeAdivinha {
 				.append("mColJagadas")
 				.append(((mColJogadas.size() == 0) ? "Nenhuma jogada ainda...\n"
 						: jogadasParaFrase() + "\n"));
-		sb.append("mTentativas= ").append(mTentativas);
+		sb.append("mTentativas= ").append(mTentativas).append("\n");
+		sb.append("Pontuação= ").append(pontuacao());
 		return sb.toString();
 	}// estadoDoJogoEnquantoFrase
 

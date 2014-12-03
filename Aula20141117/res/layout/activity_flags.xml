@@ -8,16 +8,17 @@
         android:id="@+id/id_tv_sobre_app"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:gravity="center"
         android:layout_margin="10dp"
-        android:text="@string/str_sobre_app" />
+        android:gravity="center"
+        android:text="@string/str_sobre_app"
+        android:textSize="24sp" />
 
-     <View android:layout_width="match_parent"
+    <View
+        android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_margin="15dp"
-        android:background="@color/solid_black"/>
-    
+        android:background="@color/solid_black" />
+
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
@@ -29,8 +30,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:contentDescription="@string/str_sobre_pt"
             android:background="@null"
+            android:contentDescription="@string/str_sobre_pt"
             android:src="@drawable/flag_pt2" />
 
         <ImageButton
@@ -38,22 +39,32 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:contentDescription="@string/str_sobre_uk"
             android:background="@null"
+            android:contentDescription="@string/str_sobre_uk"
             android:src="@drawable/flag_uk2" />
     </LinearLayout>
 
-    <View android:layout_width="match_parent"
+    <View
+        android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_margin="15dp"
-        android:background="@color/solid_black"/>
-    
-    <TextView
-        android:id="@+id/id_tv_info"
+        android:background="@color/solid_black" />
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:text="@string/str_tv_info" />
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/id_tv_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/str_tv_info"
+            android:paddingRight="10dp"
+            android:textSize="18sp" />
+    </ScrollView>
 
 </LinearLayout>

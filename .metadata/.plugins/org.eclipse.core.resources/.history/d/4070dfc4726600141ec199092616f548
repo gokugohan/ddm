@@ -1,7 +1,0 @@
-package com.example.jogodeadivinha;
-
-import android.app.Activity;
-
-public class JogoDeAdivinhaEmCurso extends Activity {
-
-}

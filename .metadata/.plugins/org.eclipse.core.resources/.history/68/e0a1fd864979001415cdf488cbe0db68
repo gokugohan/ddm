@@ -1,0 +1,43 @@
+package com.example.util;
+
+public class AmUtilIO {
+
+	
+	public AmUtilIO() {
+	}
+	
+	public String io_aux_RandomText(String nomeFicheiro, String... conteudo) {
+		String ret="";
+		int quantidadeDeLinhas = aux_inteiroAleatorio(5,10);
+		int quantidadeDePalavrasNaLinha = 0;
+		
+		for(int linha = 1;linha<=quantidadeDeLinhas;linha++){
+			quantidadeDePalavrasNaLinha = aux_InteiroAleatorio(1,5);
+			for(int palavra = 1;palavra<=quantidadeDePalavrasNaLinha;palavra++){
+				String palavraAleatorio = io_aux_RandomSstring();
+			}
+		}
+		return ret;
+	}//io_aux_RandomText
+	
+	private int aux_InteiroAleatorio(int i, int j) {
+		return 0;
+	}
+
+	private String io_aux_RandomSstring() {
+		return null;
+	}
+
+	private int aux_inteiroAleatorio(int i, int j) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public String io_aux_TextoAleatorio(String nomeFicheiro) {
+		return io_aux_RandomText(nomeFicheiro);
+	}//io_aux_TextoAleatorio
+	
+	
+	
+	
+}

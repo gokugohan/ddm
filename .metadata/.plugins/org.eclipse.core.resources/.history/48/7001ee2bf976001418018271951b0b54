@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3"
+    tools:context="com.example.filesystem1.MainActivity" >
+
+    <TextView
+        android:id="@+id/id_tv_frase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:gravity="center"
+        android:text="@string/str_frase"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/id_et_frase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="@string/str_frase"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <LinearLayout android:layout_width="match_parent"android:layout_height="wrap_content">
+        <Button
+        android:id="@+id/id_btn_escrever"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:text="@string/str_faz_escrita" />
+
+    <Button
+        android:id="@+id/id_btn_ler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:text="@string/str_faz_leitura" />
+    </LinearLayout>
+    
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="1.7"
+        android:layout_height="0dp" >
+
+        <TextView
+            android:id="@+id/id_tv_frase_leitura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            
+            android:gravity="center" />
+    </ScrollView>
+
+</LinearLayout>
