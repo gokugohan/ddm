@@ -2,3 +2,5 @@
 1417431502562	Rename method 'io_aux_EscreveFicheiroAleatorio'
 1417431683627	Rename method 'inteiroAleatorio'
 1417431715245	Rename local variable 'quantidadeDePalavras'
+1417606717922	Rename method 'io_WriteFileToInternalStorage'
+1417606729368	Rename method 'io_WriteFileToInternalStorage'

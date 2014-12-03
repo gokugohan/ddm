@@ -119,7 +119,7 @@ public class AmUtilIO {
 	 *            o conteudo a ser gravado no ficheiro
 	 * @return
 	 */
-	public String io_WriteFileToInternalStorage(String nomeFicheiro,
+	public String io_is_WriteFileToInternalStorage(String nomeFicheiro,
 			String... conteudo) {
 		StringBuilder ret = new StringBuilder();
 
@@ -166,7 +166,7 @@ public class AmUtilIO {
 	 *            o conteudo a ser gravado no ficheiro
 	 * @return
 	 */
-	public String io_WriteFileToInternalStorage(String diretorio,
+	public String io_is_WriteFileToInternalStorage(String diretorio,
 			String nomeFicheiro, String... conteudo) {
 
 		StringBuilder ret = new StringBuilder();
@@ -212,6 +212,59 @@ public class AmUtilIO {
 		}
 
 		return ret.toString();
+	}
+
+	private StringBuilder readFileAux(File ficheiro) {
+		StringBuilder sb = new StringBuilder();
+		try {
+			FileInputStream fis = new FileInputStream(ficheiro);
+			int iC;
+			char c;
+			while ((iC = fis.read()) != -1) {
+				c = (char) iC;
+				sb.append(c);
+			}
+			fis.close();
+			return sb;
+		} catch (Exception e) {
+			Log.i(TAG_IO, e.getMessage());
+		}
+		return sb;
+	}
+
+	public String io_is_ReadFileFromRoot(String nomeFicheiro) {
+		StringBuilder sb = new StringBuilder();
+
+		String rootDaIs = context.getFilesDir().getAbsolutePath();
+
+		File ficheiro = new File(rootDaIs, nomeFicheiro);
+		boolean bFicheiroExiste = ficheiro.isFile();
+
+		if (bFicheiroExiste) {
+			sb = readFileAux(ficheiro);
+		}
+
+		return sb.toString();
+	}
+
+	public String io_is_ReadFileFromDir(String dir, String nomeFicheiro) {
+		StringBuilder sb = new StringBuilder();
+
+		String rootDaIs = context.getFilesDir().getAbsolutePath();
+		String caminhoDaDirDesejado = rootDaIs + "/" + dir;
+		File dirDesejado = new File(rootDaIs, nomeFicheiro);
+
+		boolean bDirExiste = dirDesejado.isDirectory();
+
+		if (bDirExiste) {
+			File ficheiro = new File(caminhoDaDirDesejado, nomeFicheiro);
+			boolean bFicheiroExiste = ficheiro.isFile();
+			if (bFicheiroExiste) {
+				sb = readFileAux(ficheiro);
+			}
+		}
+
+		return sb.toString();
 	}
 
 	// ///////FERAMENTAS DE IO NA EXTERNAL STORAGE ////////////////////
@@ -352,6 +405,40 @@ public class AmUtilIO {
 					}
 				} catch (Exception e) {
 					Log.i(TAG_IO, e.getMessage());
+				}
+			}
+		}
+
+		return sb.toString();
+	}
+
+	/**
+	 * Recebe o nome da diretoria que dentro da e.s. deve conter o ficheiro exº
+	 * "fotos/dezembro/" Recebe o nome do ficheiro a ler exº "dias.txt" Retorna
+	 * todo o conteudo do ficheiro ou uma string vazia em caso de insucesso
+	 * 
+	 * @param dirContentora
+	 * @param nomeFicheiro
+	 * @return
+	 */
+	public String io_es_ReadContentFileFromDir(String dirContentora,
+			String nomeFicheiro) {
+		StringBuilder sb = new StringBuilder();
+
+		boolean bPossoler = io_es_IsSdUsable();
+		if (bPossoler) {
+			String rootDaEs = io_es_GetAbsolutPath();
+			String caminhoAbsolutoDaDirContentora = rootDaEs + "/"
+					+ dirContentora;
+			File fDirContentora = new File(caminhoAbsolutoDaDirContentora);
+			boolean dirExiste = fDirContentora.isDirectory();
+			if (dirExiste) {
+				File ficheiro = new File(caminhoAbsolutoDaDirContentora,
+						nomeFicheiro);
+				boolean ficheiroExiste = ficheiro.isFile();
+
+				if (ficheiroExiste) {
+					sb = readFileAux(ficheiro);
 				}
 			}
 		}
